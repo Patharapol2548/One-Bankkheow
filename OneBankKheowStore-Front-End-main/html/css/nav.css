@@ -1,0 +1,237 @@
+/* Shared navbar styles for all customer pages.
+   Single source of truth — keep per-page CSS files free of nav rules. */
+
+:root {
+  --nav-primary-green: #3C6842;
+  --nav-secondary-green: #24502C;
+  --nav-bg-green: #FFFEF6;
+  --nav-card-bg: #ffffff;
+  --nav-text-dark: #45683b;
+}
+
+header {
+  background-color: var(--nav-primary-green);
+  width: 100%;
+}
+
+.top-bar {
+  background-color: var(--nav-secondary-green);
+  height: 40px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 80px;
+  color: white;
+  font-size: 14px;
+}
+
+.top-bar .admin-login b {
+  font-weight: 800;
+}
+
+nav {
+  padding: 20px 80px;
+}
+
+.nav-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.logo img {
+  height: 88px;
+  width: 109px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+.search-container {
+  flex: 1;
+  max-width: 770px;
+}
+
+.search-bar {
+  width: 100%;
+  height: 58px;
+  background-color: #ffffff;
+  border-radius: 28px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  gap: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar img {
+  width: 30px;
+  height: 30px;
+}
+
+.search-bar input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  color: var(--nav-text-dark);
+}
+
+.nav-icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-icons img {
+  width: 58px;
+  height: 58px;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+.login-register-btn {
+  background-color: var(--nav-card-bg);
+  border-radius: 15px 5px 15px 15px;
+  padding: 5px 15px;
+  color: var(--nav-primary-green);
+  font-size: 12px;
+  font-weight: 400;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.category-nav {
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+  margin-top: 20px;
+}
+
+.category-chip {
+  background-color: var(--nav-bg-green);
+  color: var(--nav-text-dark);
+  font-size: 12px;
+  padding: 5px 21px;
+  border-radius: 51.5px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.2s;
+}
+
+.category-chip:hover {
+  background-color: #f0eedf;
+}
+
+/* Advance Search dropdown */
+.obk-search-wrap {
+  position: relative;
+  width: 100%;
+}
+
+.obk-advance {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  right: 0;
+  background: #f5f7fb;
+  border-radius: 18px;
+  padding: 16px 20px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  z-index: 9999;
+  display: none;
+  font-family: 'Manrope', sans-serif;
+  color: #1e293b;
+}
+
+.obk-advance.open {
+  display: block;
+}
+
+.obk-advance h4 {
+  margin: 0 0 10px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.obk-advance .obk-input {
+  width: 100%;
+  border: none;
+  background: #fff;
+  padding: 10px 16px;
+  border-radius: 999px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  outline: none;
+  color: #1e293b;
+}
+
+.obk-advance .obk-filter-label {
+  margin-top: 4px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.obk-advance .obk-filter-help {
+  font-size: 12px;
+  color: #b46b1f;
+  margin: 2px 0 8px;
+}
+
+.obk-chip-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.obk-chip {
+  padding: 4px 14px;
+  font-size: 12px;
+  border-radius: 999px;
+  background: #fff;
+  cursor: pointer;
+  user-select: none;
+  border: 1px solid #ddd;
+  color: #b46b1f;
+}
+
+.obk-chip.include {
+  background: #d7f5d7;
+  border-color: #8bcf8b;
+  color: #1e293b;
+}
+
+.obk-chip.exclude {
+  background: #fde0e0;
+  border-color: #e08b8b;
+  text-decoration: line-through;
+  color: #1e293b;
+}
+
+.obk-advance .obk-actions {
+  margin-top: 12px;
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.obk-advance .obk-btn {
+  padding: 6px 16px;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.obk-advance .obk-btn-primary {
+  background: #2d6cdf;
+  color: #fff;
+}
+
+.obk-advance .obk-btn-ghost {
+  background: transparent;
+  color: #1e293b;
+}

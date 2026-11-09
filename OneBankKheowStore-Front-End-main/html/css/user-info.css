@@ -1,0 +1,229 @@
+:root {
+    --primary-green: #3C6842;
+    --secondary-green: #24502C;
+    --bg-green: #FFFEF6;
+    --card-bg: #ffffff;
+    --muted-text: #94a3b8;
+    --light-green: #FFFEF6;
+    --text-dark: #45683b;
+    --accent-green: #45683b;
+    --dark-text: #0f172a;
+    --slate-100: #FFFEF6;
+    --border-color: #e2e8f0;
+    --dark-navy: #45683b;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    background-color: var(--bg-green);
+    color: #333;
+    overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Nav styles moved to css/nav.css (shared across all customer pages). */
+
+/* --- User Info Page --- */
+.info-container {
+    max-width: 1302px;
+    margin: 40px auto;
+    padding: 0 80px;
+    
+}
+
+.info-card {
+    background: #ffffff;
+    border-radius: 0px;
+    padding: 40px;
+    max-width: 2000px;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05);
+}
+
+.info-title {
+    font-size: 32px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    color: var(--dark-text)
+}
+
+.info-content {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+/* ── Profile Section (Left) ──────────────── */
+.profile-section {
+    flex: 0 0 300px;
+}
+
+.image-wrapper {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+}
+
+.image-wrapper img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.change-img-btn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: rgba(255, 255, 255, 0.5);
+    border: none;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+/* ── Form Section (Right) ───────────────── */
+/* Container for the entire form section */
+.form-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Reduce gap slightly for a more compact look */
+    border: none; /* Remove default legend border */
+    padding: 0;
+    margin: 0;
+}
+
+/* Align label and input in the same row for all fields */
+.input-name, 
+.input-email, 
+.input-phone, 
+.input-DOB {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 0; /* Adjust padding for better vertical spacing */
+    width: 77.5%;
+}
+
+.input-DOB input.type {
+    text-decoration-color: #929292;
+
+}
+
+/* Set fixed width for labels to ensure inputs align vertically */
+.form-section label {
+    flex: 0 0 130px; /* Slightly increase label width to prevent text crowding */
+    font-size: 18px;
+    color: var(--dark-text);
+    font-weight: 500;
+}
+
+/* Wrapper for First Name and Last Name inputs */
+/* Fix: Allow first and last name inputs to stretch fully like other fields */
+.input-name .input-name { 
+    display: flex;
+    gap: 15px;
+    flex: 1;
+    padding: 0; /* Remove overlapping padding */
+}
+
+/* Global input styling */
+.form-section input {
+    flex: 1;
+    height: 45px;
+    background: #e0e1e2; 
+    border: 1px solid #475569;
+    border-radius: 8px;
+    padding: 0 20px;
+    font-size: 16px;
+    outline: none;
+    width: 100%; 
+}
+
+/* Limit maximum width for Email and Phone fields for better UI */
+/* Set optimal max-width so they are uniform and not stretched too long */
+.input-email input,
+.input-phone input {
+    max-width: 500px; 
+}
+
+/* Date of Birth specific wrapper */
+.date-input-wrapper {
+    position: relative;
+    flex: 0 0 230px; 
+}
+
+.date-input-wrapper input {
+    cursor: pointer;
+}
+
+/* Calendar icon positioning inside date input */
+.date-input-wrapper .material-icons-outlined {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #475569;
+    font-size: 20px;
+    pointer-events: none; /* Allows clicking through the icon to the input */
+}
+
+/* ── Footer & Button ─────────────────────── */
+/* Align button with input fields (Label width 130px + Gap 20px) */
+.form-actions {
+    margin-top: 15px;
+    padding-left: 150px; 
+}
+
+.save-btn {
+    background-color: var(--primary-green);
+    color: white;
+    border: none;
+    padding: 12px 45px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+    font-size: 16px;
+}
+
+.save-btn:hover {
+    background-color: var(--text-dark);
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .info-content {
+        flex-direction: column;
+    }
+    .input-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    .input-row label {
+        flex: none;
+    }
+}

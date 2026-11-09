@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout - OneBankKheawStore</title>
+    <meta
+      name="description"
+      content="Complete your purchase at OneBankKheawStore. Select payment method and confirm your order."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+Thai:wght@400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/checkout.css" />
+    <script src="components/components.js"></script>
+  </head>
+  <body>
+    <nav-bar></nav-bar>
+
+    <div class="content-area">
+      <!-- Destination for Delivery -->
+      <div class="destination-section" id="destination-section">
+        <div class="section-label">Destination for Delivery</div>
+        <div class="destination-row">
+          <div class="destination-info">
+            <strong>Daranpob (+66) XX XXX XXXX</strong>&nbsp;&nbsp;&nbsp; 100
+            moo 29,Sub-district ,District ,province ,Thailand, Postcode
+          </div>
+          <a
+            href="checkout-change-address.html"
+            class="change-link"
+            id="change-address-btn"
+            >Change</a
+          >
+        </div>
+      </div>
+
+      <!-- Cart Items Review -->
+      <div class="cart-table">
+        <div class="cart-header">
+          <span>Product</span>
+          <span>Price</span>
+          <span>Quantity</span>
+          <span>Total</span>
+        </div>
+
+        <div class="cart-item" id="checkout-item-1">
+          <div class="product-info">
+            <div class="product-image">
+              <img
+                src="https://i.ibb.co/PZSZKk1r/d1cd663a4bd97995049b4eee2a5bcbd77163146a.jpg"
+                alt="Minimalist Storage Box"
+              />
+            </div>
+            <div class="product-details">
+              <div class="product-category">Home Organization</div>
+              <div class="product-name">Minimalist Storage Box</div>
+              <div class="product-variant">Size: Small • White</div>
+            </div>
+          </div>
+          <div class="item-price">20</div>
+          <div class="quantity-selector">
+            <button class="qty-btn minus" aria-label="Decrease quantity">
+              <span class="material-icons-outlined" style="font-size: 14px"
+                >remove</span
+              >
+            </button>
+            <div class="qty-value">2</div>
+            <button class="qty-btn plus" aria-label="Increase quantity">
+              <span class="material-icons-outlined" style="font-size: 14px"
+                >add</span
+              >
+            </button>
+          </div>
+          <div class="item-total-wrap">
+            <span class="item-total">40฿</span>
+            <button class="remove-btn" aria-label="Remove item">
+              <span class="material-icons-outlined">delete_outline</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <a href="index.html" class="continue-shopping">
+        <span>←</span> Continue Shopping
+      </a>
+
+      <!-- Discount Code -->
+      <div class="discount-section" id="discount-section">
+        <div class="discount-badge"></div>
+        <div class="discount-text">Discount's Code Of One Bank!</div>
+        <span class="discount-use-link" id="use-code-btn">Use This Code!</span>
+      </div>
+
+      <!-- Payment Method -->
+      <div class="payment-section" id="payment-section">
+        <div class="payment-header">
+          <div class="payment-title">Payment Method</div>
+          <div class="payment-options">
+            <button class="payment-option active" id="payment-qr">
+              QR Promptpay
+            </button>
+            <button class="payment-option" id="payment-cc">Credit Card</button>
+            <button class="payment-option" id="payment-tm">TrueMoney</button>
+          </div>
+        </div>
+
+        <!-- Summary -->
+        <div class="summary-bottom">
+          <div class="summary-line"></div>
+          <div class="price-row">
+            <span class="price-label">Subtotal</span>
+            <span class="price-value">฿ 40</span>
+          </div>
+          <div class="price-row total">
+            <span class="price-label">Total Amount</span>
+            <span class="price-value">฿ 40</span>
+          </div>
+          <div class="summary-line" style="margin-top: 16px"></div>
+          <a href="checkout-success.html">
+            <button class="purchase-btn" id="purchase-btn">Purchase</button>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <footer-bar></footer-bar>
+    <script src="js/config.js" defer></script>
+    <script src="js/exchange-rate.js" defer></script>
+    <script src="js/nav-search.js" defer></script>
+  </body>
+</html>

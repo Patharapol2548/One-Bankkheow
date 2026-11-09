@@ -1,0 +1,45 @@
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: onebankkheow-mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: itcs223_store
+    ports:
+      - "3307:3306"
+    volumes:
+      - ./OneBankKheowStore-Back-End-main/data/onebankkheow.sql:/docker-entrypoint-initdb.d/01-init.sql:ro
+      - mysql_data:/var/lib/mysql
+
+  backend:
+    build:
+      context: ./OneBankKheowStore-Back-End-main
+      dockerfile: Dockerfile
+    container_name: onebankkheow-backend
+    restart: always
+    ports:
+      - "3100:3100"
+    environment:
+      PORT: 3100
+      DB_HOST: mysql
+      DB_USER: root
+      DB_PASSWORD: rootpassword
+      DB_NAME: itcs223_store
+      EXCHANGE_RATE_KEY: ""
+    depends_on:
+      - mysql
+
+  frontend:
+    build:
+      context: ./OneBankKheowStore-Front-End-main
+      dockerfile: Dockerfile
+    container_name: onebankkheow-frontend
+    restart: always
+    ports:
+      - "5500:80"
+    depends_on:
+      - backend
+
+volumes:
+  mysql_data:

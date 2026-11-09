@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Change Address - OneBankKheawStore</title>
+    <meta
+      name="description"
+      content="Select or add a new delivery address for your order at OneBankKheawStore."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/checkout-change-address.css" />
+    <script src="components/components.js"></script>
+  </head>
+  <body>
+    <nav-bar></nav-bar>
+
+    <div class="content-area">
+      <!-- Destination for Delivery -->
+      <div class="destination-section">
+        <div class="section-label">Destination for Delivery</div>
+        <div class="destination-row">
+          <div class="destination-info">
+            <strong>Daranpop (+66) XX XXX XXXX</strong>&nbsp;&nbsp;&nbsp; 100
+            moo 29,Sub-district ,District ,province ,Thailand, Postcode
+          </div>
+          <span class="change-link">Change</span>
+        </div>
+      </div>
+
+      <!-- Cart Items Review -->
+      <div class="cart-table">
+        <div class="cart-header">
+          <span>Product</span>
+          <span>Price</span>
+          <span>Quantity</span>
+          <span>Total</span>
+        </div>
+        <div class="cart-item">
+          <div class="product-info">
+            <div class="product-image">
+              <img
+                src="https://i.ibb.co/PZSZKk1r/d1cd663a4bd97995049b4eee2a5bcbd77163146a.jpg"
+                alt="Minimalist Storage Box"
+              />
+            </div>
+            <div class="product-details">
+              <div class="product-category">Home Organization</div>
+              <div class="product-name">Minimalist Storage Box</div>
+              <div class="product-variant">Size: Small • White</div>
+            </div>
+          </div>
+          <div class="item-price">20</div>
+          <div class="quantity-selector">
+            <button class="qty-btn minus">
+              <span class="material-icons-outlined" style="font-size: 14px"
+                >remove</span
+              >
+            </button>
+            <div class="qty-value">2</div>
+            <button class="qty-btn plus">
+              <span class="material-icons-outlined" style="font-size: 14px"
+                >add</span
+              >
+            </button>
+          </div>
+          <div class="item-total-wrap">
+            <span class="item-total">40฿</span>
+            <button class="remove-btn">
+              <span class="material-icons-outlined">delete_outline</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <a href="index.html" class="continue-shopping"
+        ><span>←</span> Continue Shopping</a
+      >
+    </div>
+
+    <!-- ====== MODAL: Your Destination ====== -->
+    <div class="modal-overlay" id="destination-modal">
+      <div class="modal-box">
+        <div class="modal-header">
+          <span class="modal-title">Your Destination</span>
+          <a href="checkout.html">
+            <button
+              class="modal-close"
+              id="modal-close-btn"
+              aria-label="Close modal"
+            >
+              <span class="material-icons-outlined">close</span>
+            </button>
+          </a>
+        </div>
+        <div class="modal-body">
+          <div class="address-list">
+            <!-- Address entries would populate here -->
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a href="checkout-add-address.html">
+            <button class="add-new-btn" id="add-new-address-btn">
+              <span>+</span> Add New adress
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <footer-bar></footer-bar>
+    <script src="js/config.js" defer></script>
+    <script src="js/nav-search.js" defer></script>
+  </body>
+</html>

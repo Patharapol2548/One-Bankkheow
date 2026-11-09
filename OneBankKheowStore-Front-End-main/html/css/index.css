@@ -1,0 +1,226 @@
+:root {
+    --primary-green: #3C6842;
+    --secondary-green: #24502C;
+    --bg-green: #FFFEF6;
+    --card-bg: #ffffff;
+    --muted-text: #94a3b8;
+    --light-green: #FFFEF6;
+    --text-dark: #45683b;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    background-color: var(--bg-green);
+    color: #333;
+    overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Nav styles moved to css/nav.css (shared across all customer pages). */
+
+/* --- Hero Section --- */
+.hero {
+    padding: 34px 80px 58px;
+    background-color: var(--card-bg);
+    border-radius: 27px;
+    margin: 20px 80px;
+    display: flex;
+    gap: 24px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.25);
+}
+
+.hero img {
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.hero-large {
+    flex: 2;
+    height: 327px;
+}
+
+.hero-small {
+    flex: 1;
+    height: 327px;
+}
+
+/* --- Categories Shortcut Section --- */
+.categories-section {
+    margin: 40px 80px;
+    background-color: var(--card-bg);
+    border-radius: 0 0 15px 15px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.25);
+    padding-bottom: 40px;
+    position: relative;
+}
+
+.category-header {
+    height: 110px;
+    display: flex;
+    align-items: center;
+    padding-left: 80px;
+    border-bottom: 1px solid var(--muted-text);
+    color: var(--muted-text);
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.decorative-guitar {
+    position: absolute;
+    left: 20px;
+    top: 10px;
+    width: 93px;
+    height: 93px;
+}
+
+.decorative-guitar img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.category-items {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 30px;
+}
+
+.category-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+}
+
+.category-circle {
+    width: 126px;
+    height: 126px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+}
+
+.category-circle img {
+    width: 70%;
+    height: 70%;
+    object-fit: contain;
+    z-index: 1;
+}
+
+.category-name {
+    color: #94a3b8;
+    font-size: 16px;
+}
+
+/* --- Products Section --- */
+.product-section {
+    padding: 40px 80px;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 40px;
+}
+
+.product-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    grid-template-columns: repeat(5, 1fr); 
+}
+
+.product-row {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    scrollbar-width: none;
+}
+
+.product-row::-webkit-scrollbar {
+    display: none;
+}
+
+.product-card {
+    min-width: 242px;
+    height: 242px;
+    background-color: var(--card-bg);
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+.product-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: var(--primary-green);
+    color: white;
+    padding: 60px 80px 30px;
+    margin-top: auto;
+}
+
+.footer-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.footer-links {
+    display: flex;
+    gap: 24px;
+    font-size: 14px;
+}
+
+.footer-line {
+    height: 1px;
+    background-color: white;
+    opacity: 0.3;
+    margin: 20px 0;
+}
+
+.meet-team {
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+.green-divider {
+    height: 10px;
+    background-color: var(--primary-green);
+    width: 100%;
+}

@@ -1,0 +1,218 @@
+:root {
+    --bg: #fce4ec;
+    --muted: #3C6842;
+    --accent: #3C6842;
+    --input-bg: #f3f6f8;
+    --margin: 80px;
+    --gutter: 24px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* ── LEFT PANEL ─────────────────────────────── */
+.left {
+    flex: 1;
+    padding: 138px 78.5px 35px 213px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    overflow-y: auto;
+}
+
+.brand-name {
+    font-size: 32px;
+    color: var(--accent);
+    font-weight: 700;
+}
+
+.tagline {
+    color: var(--muted);
+    font-size: 16px;
+    margin-top: 24px;
+    max-width: 500px;
+    line-height: 1.5;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.form-group label {
+    font-size: 14px;
+    color: #254600;
+    font-weight: 500;
+}
+
+.form-group input {
+    height: 56px;
+    padding: 12px 20px;
+    border-radius: 16px;
+    border: none;
+    background: #eef1f5;
+    outline: none;
+    font-size: 16px;
+    color: #274405;
+    font-family: inherit;
+    width: 100%;
+}
+
+.form-group input:focus {
+    background: #eef1f5;
+   
+}
+.row-forgot, .row-checkbox {
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px;
+}
+
+.forgot, .checkbox-label{
+    font-size: 14px;
+    color: var(--muted);
+    text-decoration: none;
+}
+
+.checkbox{
+    align-items: center;
+}
+
+.btn-login, .btn-register {
+    max-width: 388px;
+    width: 100%;
+    margin: 0 auto;
+    height: 50px;
+    border-radius: 12px;
+    background: linear-gradient(90deg, var(--accent), #ffe658);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 14px;
+    font-family: inherit;
+    transition: opacity 0.2s;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    /* เพิ่มส่วนนี้เพื่อให้ลิงก์ดูเหมือนปุ่ม 100% */
+    text-decoration: none; /* ลบเส้นใต้ */
+    outline: none;         /* ลบขอบเวลาโฟกัส */
+}
+
+.btn-login:hover, .btn-register:hover { 
+    opacity: 0.88; 
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--muted);
+    font-size: 14px;
+    font-style: semi-bold;
+}
+
+.divider:before,
+.divider:after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #dde4ea;
+}
+
+.social-btn {
+    max-width: 388px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px;
+    border-radius: 10px;
+    background: #ffffff;
+    border: 1px solid #e6eef4;
+    color: var(--muted);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    font-family: inherit;
+    cursor: pointer;
+    transition: box-shadow 0.2s;
+}
+
+.social-btn:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+
+.social-btn img {
+    width: 20px;
+    height: 20px;
+}
+
+.signup-row {
+    color: var(--muted);
+    font-size: 13px;
+    align-items: center;
+    text-align: center;
+}
+
+.signup-row a {
+    color: var(--muted);
+    font-style: semi-bold;
+    text-decoration: underline;
+    padding-left: 5px;
+}
+
+footer {
+    color: #9aa4b2;
+    font-size: 12px;
+    margin-top: auto;
+    padding-top: 24px;
+    text-align: center;
+}
+
+/* ── RIGHT PANEL ─────────────────────────────── */
+.right {
+    flex: 1;
+    height: 100vh;
+    padding: 80px 80px 30px 78.5px;
+}
+
+.right img {
+    width: 100%;
+    height: 100%;
+    border-radius: 24px;
+    object-fit: cover;
+    display: block;
+}
+
+/* ── RESPONSIVE ──────────────────────────────── */
+@media (max-width: 768px) {
+    body { flex-direction: column; }
+
+    .left { padding: 40px 28px; }
+
+    .right {
+        padding: 0 20px 20px;
+        height: 280px;
+        flex: none;
+    }
+}

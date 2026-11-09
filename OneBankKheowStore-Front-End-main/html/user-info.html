@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - OneBankKheawStore</title>
+    <meta name="description"
+        content="Complete your purchase at OneBankKheawStore. Select payment method and confirm your order.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Thai:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="css/user-info.css">
+    <script src="components/components.js"></script>
+</head>
+
+<body>
+
+    <nav-bar></nav-bar>
+
+    <main class="info-container">
+        <div class="info-card">
+            <h1 class="info-title">Your Info</h1>
+
+            <div class="info-content">
+                <div class="profile-section">
+                    <div class="image-wrapper">
+                        <img src="https://blocks.astratic.com/img/general-img-square.png" alt="User Profile">
+                        <button class="change-img-btn">
+                            <span class="material-icons-outlined">sync</span> Change
+                        </button>
+                    </div>
+                </div>
+                <legend class="form-section">
+                    <form>
+                        <div class="input-name">
+                            <label>Name</label>
+                            <div class="input-name">
+                                <input type="text" placeholder="First Name" id="firstName" name="firstName" required
+                                    title="Please fill out this field">
+                                <input type="text" placeholder="Last Name" id="lastName" name="lastName" required
+                                    title="Please fill out this field">
+                            </div>
+                        </div>
+
+                        <div class="input-email">
+                            <label>Email</label>
+                            <input type="email" placeholder="Example@gmail.com" name="userid" required
+                                title="Please enter a valid email address">
+                        </div>
+
+                        <div class="input-phone">
+                            <label>Phone</label>
+                            <input type="tel" placeholder="XXX-XXX-XXXX" name="phone" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" autocomplete="tel"
+                                required title="Phone : XXX-XXX-XXXX">
+                        </div>
+
+                        <div class="input-DOB">
+                            <label>Date of birth</label>
+                            <div class="date-input-wrapper">
+                                <input type="date" name="dob" required title="Please select your date of birth">
+                            </div>
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="save-btn">Save Changes</button>
+                        </div>
+                    </form>
+                </legend>
+
+            </div>
+        </div>
+        </div>
+
+        </div>
+    </main>
+    <script src="js/config.js" defer></script>
+    <script src="js/user-info.js" defer></script>
+    <script src="js/nav-search.js" defer></script>
+</body>
+</html>
