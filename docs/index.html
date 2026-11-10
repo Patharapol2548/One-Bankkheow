@@ -1,259 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>OneBankKheow Store — Project Showcase & Evaluator Guide</title>
-  <!-- Tailwind CSS via CDN for portable GitHub Pages styling -->
+  <title>OneBankKheow Store — Project Overview & Official Reports</title>
+  <!-- Tailwind CSS via CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
-    body { font-family: 'Plus Jakarta Sans', sans-serif; }
-    .glass { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(12px); }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    .glass {
+      background: rgba(255, 255, 255, 0.90);
+      backdrop-filter: blur(12px);
+    }
   </style>
 </head>
+
 <body class="bg-slate-50 text-slate-800 antialiased min-h-screen flex flex-col justify-between">
 
   <!-- Header / Navigation -->
-  <header class="sticky top-0 z-50 glass border-b border-slate-200">
+  <header class="sticky top-0 z-50 glass border-b border-slate-200 shadow-sm">
     <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
       <div class="flex items-center space-x-3">
-        <span class="text-3xl">🪡</span>
         <div>
           <h1 class="text-xl font-extrabold tracking-tight text-slate-900">OneBankKheow Store</h1>
-          <p class="text-xs text-slate-500 font-medium">ITCS-223 Web Programming Project</p>
+          <p class="text-xs text-slate-500 font-medium">OneBankKheow • ITCS223 Web Programming</p>
         </div>
       </div>
-      <div class="flex items-center space-x-4">
-        <a href="#quickstart" class="text-sm font-semibold text-slate-600 hover:text-indigo-600 transition">Quick Start</a>
-        <a href="#credentials" class="text-sm font-semibold text-slate-600 hover:text-indigo-600 transition">Demo Accounts</a>
-        <a href="#architecture" class="text-sm font-semibold text-slate-600 hover:text-indigo-600 transition">Architecture</a>
-        <a href="https://github.com" target="_blank" class="inline-flex items-center space-x-2 bg-slate-900 hover:bg-slate-800 text-white text-xs font-semibold px-4 py-2 rounded-lg transition shadow-sm">
-          <i class="fa-brands fa-github text-sm"></i>
-          <span>View Source</span>
-        </a>
-      </div>
-    </div>
+
+      <!-- Navigation ordered by: About -> 4-Tier Nav -> How to Run -> Demo Accounts -> Reports -> Team -->
+      <nav class="hidden md:flex items-center space-x-6 text-sm font-semibold">
+        <a href="#about" class="text-slate-600 hover:text-indigo-600 transition">About</a>
+        <a href="#navigation-tiers" class="text-slate-600 hover:text-indigo-600 transition">4-Tier Nav</a>
+        <a href="#how-to-run" class="text-slate-600 hover:text-indigo-600 transition">How to Run</a>
+        <a href="#credentials" class="text-slate-600 hover:text-indigo-600 transition">Demo Accounts</a>
+        <a href="#reports" class="text-slate-600 hover:text-indigo-600 transition">Reports</a>
+        <a href="#team" class="text-slate-600 hover:text-indigo-600 transition">Team</a>
+      </nav>
   </header>
 
-  <!-- Hero Section -->
   <main class="flex-grow">
-    <section class="max-w-6xl mx-auto px-6 pt-16 pb-12 text-center">
-      <div class="inline-flex items-center space-x-2 bg-indigo-50 border border-indigo-200 text-indigo-700 text-xs px-3.5 py-1.5 rounded-full font-semibold mb-6">
-        <span>✨</span>
-        <span>Evaluator & HR Quick Start Portal</span>
+    <!-- 1. About / Hero Section -->
+    <section id="about" class="max-w-6xl mx-auto px-6 pt-14 pb-8 text-center">
+      <div
+        class="inline-flex items-center space-x-2 bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs px-3.5 py-1.5 rounded-full font-semibold mb-5">
+        <span>🏷️</span>
+        <span>The Digital "20 Baht Shop" (ร้านทุกอย่าง 20 บาท)</span>
       </div>
       <h2 class="text-4xl sm:text-5xl font-black text-slate-900 tracking-tight leading-tight max-w-3xl mx-auto">
-        Specialized Needle & Craft E-Commerce Platform
+        One Bank Kheow Store
       </h2>
-      <p class="mt-4 text-lg text-slate-600 max-w-2xl mx-auto">
-        A full-stack online store application featuring product discovery, real-time THB→CNY currency conversion, responsive shopping cart, customer address management, and protected administrative inventory controls.
+      <p class="text-lg font-medium text-emerald-700 mt-2">
+        "One Green Banknote" — Affordable Fixed-Price E-Commerce Platform
+      </p>
+      <p class="mt-4 text-base sm:text-sm text-slate-600 max-w-3xl mx-auto leading-relaxed">
+        Based on the popular Thai <b>"20 Baht Shop"</b> concept (Thailand's green 20-Baht banknote), our
+        platform digitizes neighborhood retail into a scalable e-commerce store with centralized inventory management,
+        dynamic currency exchange (THB↔CNY),customer carts, and administrative controls.
       </p>
 
-      <!-- Badge row -->
-      <div class="mt-6 flex flex-wrap justify-center gap-2">
+      <!-- Action buttons -->
+      <div class="mt-7 flex flex-wrap justify-center gap-3">
+        <a href="#how-to-run"
+          class="bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-bold px-6 py-3 rounded-xl transition shadow-md flex items-center gap-2">
+          <i class="fa-solid fa-play"></i>
+          <span>How to Run (1-Click & Manual)</span>
+        </a>
+        <a href="#reports"
+          class="bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-bold px-6 py-3 rounded-xl transition shadow-md flex items-center gap-2">
+          <i class="fa-solid fa-file-pdf"></i>
+          <span>View Both Reports (PJ1 & PJ2)</span>
+        </a>
+      </div>
+
+      <!-- Tech Stack Badges -->
+      <div class="mt-8 flex flex-wrap justify-center gap-2">
         <span class="px-3 py-1 bg-emerald-100 text-emerald-800 rounded-md text-xs font-semibold">Node.js 20</span>
         <span class="px-3 py-1 bg-sky-100 text-sky-800 rounded-md text-xs font-semibold">Express 5</span>
         <span class="px-3 py-1 bg-amber-100 text-amber-800 rounded-md text-xs font-semibold">MySQL 8.0</span>
         <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-md text-xs font-semibold">Docker Compose</span>
-        <span class="px-3 py-1 bg-violet-100 text-violet-800 rounded-md text-xs font-semibold">Tailwind CSS</span>
+        <span class="px-3 py-1 bg-violet-100 text-violet-800 rounded-md text-xs font-semibold">Tailwind CSS /
+          HTML5</span>
       </div>
     </section>
 
-    <!-- Quick Start Card for HR -->
-    <section id="quickstart" class="max-w-4xl mx-auto px-6 py-8">
-      <div class="bg-gradient-to-br from-indigo-900 to-slate-900 text-white rounded-2xl p-8 sm:p-10 shadow-xl border border-indigo-700">
-        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6 pb-6 border-b border-indigo-800">
-          <div>
-            <h3 class="text-2xl font-bold flex items-center gap-2">
-              <i class="fa-solid fa-bolt text-yellow-400"></i> 1-Click Launch for Windows
-            </h3>
-            <p class="text-indigo-200 text-sm mt-1">Ready in under 60 seconds with no complex configuration.</p>
-          </div>
-          <span class="inline-flex items-center px-3 py-1 bg-indigo-800/80 text-indigo-200 rounded-full text-xs font-medium self-start sm:self-auto">
-            Recommended for Evaluators
-          </span>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
-          <div class="bg-indigo-950/60 p-5 rounded-xl border border-indigo-800/50">
-            <div class="w-8 h-8 rounded-full bg-indigo-600 text-white font-bold flex items-center justify-center mb-3">1</div>
-            <h4 class="font-bold text-base text-white mb-1">Open Docker</h4>
-            <p class="text-indigo-200 text-xs leading-relaxed">Ensure Docker Desktop is open on your Windows PC.</p>
-          </div>
-
-          <div class="bg-indigo-950/60 p-5 rounded-xl border border-indigo-800/50">
-            <div class="w-8 h-8 rounded-full bg-indigo-600 text-white font-bold flex items-center justify-center mb-3">2</div>
-            <h4 class="font-bold text-base text-white mb-1">Double-Click</h4>
-            <p class="text-indigo-200 text-xs leading-relaxed">Run <code class="bg-indigo-800 px-1.5 py-0.5 rounded text-yellow-300 font-mono">START.bat</code> (or inside <code class="bg-indigo-800 px-1.5 py-0.5 rounded text-yellow-300 font-mono">run/START.bat</code>).</p>
-          </div>
-
-          <div class="bg-indigo-950/60 p-5 rounded-xl border border-indigo-800/50">
-            <div class="w-8 h-8 rounded-full bg-indigo-600 text-white font-bold flex items-center justify-center mb-3">3</div>
-            <h4 class="font-bold text-base text-white mb-1">Explore</h4>
-            <p class="text-indigo-200 text-xs leading-relaxed">Browser automatically opens to the store on <code class="text-yellow-300">localhost:5500</code>!</p>
-          </div>
-        </div>
-
-        <div class="mt-6 pt-6 border-t border-indigo-800/60 flex flex-wrap items-center justify-between text-xs text-indigo-300 gap-2">
-          <span>🛑 Finished testing? Double-click <code class="bg-indigo-800 text-yellow-300 px-2 py-0.5 rounded">STOP.bat</code> to clean up all services.</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- Pre-Loaded Credentials -->
-    <section id="credentials" class="max-w-4xl mx-auto px-6 py-8">
-      <div class="text-center mb-8">
-        <h3 class="text-2xl font-bold text-slate-900">Pre-Loaded Demo Accounts</h3>
-        <p class="text-sm text-slate-500 mt-1">Skip registration and jump straight into testing features with these accounts.</p>
+    <!-- 2. Architecture & Stack Section -->
+    <section id="architecture" class="max-w-3xl mx-auto px-6 py-6 mb-1">
+      <div class="text-center mb-6">
+        <h3 class="text-2xl font-bold text-slate-900">3-Tier Technical Architecture</h3>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <!-- Customer Account -->
-        <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition">
-          <div class="flex items-center justify-between mb-4">
-            <div class="flex items-center space-x-3">
-              <div class="w-10 h-10 rounded-xl bg-indigo-100 text-indigo-600 flex items-center justify-center font-bold text-lg">
-                <i class="fa-solid fa-user"></i>
-              </div>
-              <div>
-                <h4 class="font-bold text-slate-900">Customer Account</h4>
-                <p class="text-xs text-slate-500">Storefront customer with sample orders</p>
-              </div>
-            </div>
-            <span class="text-xs bg-indigo-50 text-indigo-700 px-2.5 py-1 rounded-md font-semibold">Client Role</span>
-          </div>
-
-          <div class="space-y-2 text-sm bg-slate-50 p-4 rounded-xl border border-slate-100 font-mono">
-            <div class="flex justify-between items-center">
-              <span class="text-slate-500 text-xs">Email:</span>
-              <span class="font-bold text-slate-800">somchai@email.com</span>
-            </div>
-            <div class="flex justify-between items-center">
-              <span class="text-slate-500 text-xs">Password:</span>
-              <span class="font-bold text-slate-800">pwd001</span>
-            </div>
-          </div>
-
-          <div class="mt-4 text-xs text-slate-500 flex items-center gap-1.5">
-            <i class="fa-solid fa-circle-info text-indigo-500"></i>
-            <span>Test Cart, Checkout, Order Tracking, and Saved Addresses.</span>
-          </div>
-        </div>
-
-        <!-- Admin Account -->
-        <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition">
-          <div class="flex items-center justify-between mb-4">
-            <div class="flex items-center space-x-3">
-              <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center font-bold text-lg">
-                <i class="fa-solid fa-shield-halved"></i>
-              </div>
-              <div>
-                <h4 class="font-bold text-slate-900">Admin Account</h4>
-                <p class="text-xs text-slate-500">Management & inventory portal</p>
-              </div>
-            </div>
-            <span class="text-xs bg-amber-50 text-amber-700 px-2.5 py-1 rounded-md font-semibold">Admin Role</span>
-          </div>
-
-          <div class="space-y-2 text-sm bg-slate-50 p-4 rounded-xl border border-slate-100 font-mono">
-            <div class="flex justify-between items-center">
-              <span class="text-slate-500 text-xs">Username:</span>
-              <span class="font-bold text-slate-800">admin01</span>
-            </div>
-            <div class="flex justify-between items-center">
-              <span class="text-slate-500 text-xs">Password:</span>
-              <span class="font-bold text-slate-800">admin123</span>
-            </div>
-          </div>
-
-          <div class="mt-4 text-xs text-slate-500 flex items-center gap-1.5">
-            <i class="fa-solid fa-circle-info text-amber-500"></i>
-            <span>Test Product CRUD, Stock Adjustments, and Catalog Edits.</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Key Features Grid -->
-    <section class="max-w-5xl mx-auto px-6 py-8">
-      <div class="text-center mb-8">
-        <h3 class="text-2xl font-bold text-slate-900">Project Highlights</h3>
-        <p class="text-sm text-slate-500 mt-1">Core capabilities built into the application.</p>
-      </div>
-
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
-          <div class="text-indigo-600 text-xl mb-2"><i class="fa-solid fa-magnifying-glass"></i></div>
-          <h4 class="font-bold text-slate-900 mb-1">Catalog & Filter</h4>
-          <p class="text-xs text-slate-600 leading-relaxed">Instant search and categorization across different needle types (Embroidery, Beading, Leather, Tapestry).</p>
-        </div>
-
-        <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
-          <div class="text-indigo-600 text-xl mb-2"><i class="fa-solid fa-arrow-right-arrow-left"></i></div>
-          <h4 class="font-bold text-slate-900 mb-1">Live Currency Proxy</h4>
-          <p class="text-xs text-slate-600 leading-relaxed">Backend currency exchange proxy that converts THB (฿) to CNY (¥) in real-time on product pages.</p>
-        </div>
-
-        <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
-          <div class="text-indigo-600 text-xl mb-2"><i class="fa-solid fa-cart-shopping"></i></div>
-          <h4 class="font-bold text-slate-900 mb-1">Interactive Cart</h4>
-          <p class="text-xs text-slate-600 leading-relaxed">Stateful shopping cart with quantity modifications, stock validation, and subtotal calculation.</p>
-        </div>
-
-        <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
-          <div class="text-indigo-600 text-xl mb-2"><i class="fa-solid fa-truck-fast"></i></div>
-          <h4 class="font-bold text-slate-900 mb-1">Multi-Step Checkout</h4>
-          <p class="text-xs text-slate-600 leading-relaxed">Select existing delivery addresses or add new addresses dynamically during checkout.</p>
-        </div>
-
-        <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
-          <div class="text-indigo-600 text-xl mb-2"><i class="fa-solid fa-clipboard-list"></i></div>
-          <h4 class="font-bold text-slate-900 mb-1">Admin Inventory CRUD</h4>
-          <p class="text-xs text-slate-600 leading-relaxed">Secure admin portal to create, modify, inspect, and remove products from the database.</p>
-        </div>
-
-        <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
-          <div class="text-indigo-600 text-xl mb-2"><i class="fa-solid fa-box-open"></i></div>
-          <h4 class="font-bold text-slate-900 mb-1">Docker Compose Ready</h4>
-          <p class="text-xs text-slate-600 leading-relaxed">Complete orchestration connecting MySQL 8.0 with pre-loaded seed SQL, Express 5 backend, and Nginx frontend.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Architecture Section -->
-    <section id="architecture" class="max-w-4xl mx-auto px-6 py-8 mb-12">
-      <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
-        <h3 class="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+      <div class="bg-white p-7 rounded-2xl border border-slate-200 shadow-sm">
+        <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
           <i class="fa-solid fa-layer-group text-indigo-600"></i> Technical Architecture
         </h3>
-        <p class="text-sm text-slate-600 leading-relaxed mb-6">
-          The system follows a clean 3-tier architectural separation:
+        <p class="text-xs text-slate-600 leading-relaxed mb-5">
+          The system implements a decoupled 3-tier architecture for clean separation of concerns:
         </p>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs font-mono">
-          <div class="bg-slate-50 p-4 rounded-lg border border-slate-200">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs font-mono">
+          <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200">
             <span class="font-bold text-indigo-600 block mb-1">1. Frontend Layer</span>
-            <ul class="text-slate-600 space-y-1">
+            <ul class="text-slate-600 space-y-1 text-[11px]">
               <li>• HTML5 / JS (Vanilla)</li>
               <li>• Tailwind CSS</li>
-              <li>• Served by Nginx (:5500)</li>
+              <li>• Port :5500</li>
             </ul>
           </div>
-          <div class="bg-slate-50 p-4 rounded-lg border border-slate-200">
+          <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200">
             <span class="font-bold text-indigo-600 block mb-1">2. Backend API</span>
-            <ul class="text-slate-600 space-y-1">
+            <ul class="text-slate-600 space-y-1 text-[11px]">
               <li>• Node.js & Express 5</li>
               <li>• RESTful routing (:3100)</li>
               <li>• CORS & Auth middleware</li>
             </ul>
           </div>
-          <div class="bg-slate-50 p-4 rounded-lg border border-slate-200">
+          <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200">
             <span class="font-bold text-indigo-600 block mb-1">3. Persistence</span>
-            <ul class="text-slate-600 space-y-1">
+            <ul class="text-slate-600 space-y-1 text-[11px]">
               <li>• MySQL 8.0 (:3307/3306)</li>
               <li>• Schema: itcs223_store</li>
-              <li>• Volume persistent storage</li>
+              <li>• Docker volume storage</li>
             </ul>
           </div>
         </div>
@@ -261,14 +134,402 @@
     </section>
   </main>
 
+  <!-- 3. 4-Tier Navigation Architecture (from Phase II Report, Page 2) -->
+  <section id="navigation-tiers" class="max-w-5xl mx-auto px-8 py-1">
+    <div class="text-center mb-6">
+      <h3 class="text-2xl font-bold text-slate-900">4-Tier Navigation Architecture</h3>
+      <p class="text-sm text-slate-500 mt-1">Decoupled user zones and role-based workflows documented in Phase II.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 text-xs">
+      <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm flex flex-col justify-between">
+        <div>
+          <div class="flex items-center space-x-2 text-indigo-600 mb-2">
+            <i class="fa-solid fa-globe text-base"></i>
+            <h4 class="font-bold text-slate-900 text-sm">1. Public-Guest Area</h4>
+          </div>
+          <p class="text-slate-500 text-[11px] mb-3">Open browsing without authentication.</p>
+          <div class="font-mono text-slate-600 space-y-1 text-[11px]">
+            <div>• <code class="text-indigo-600 font-bold">index.html</code> (Landing)</div>
+            <div>• <code class="text-indigo-600 font-bold">webpage.html</code> (Shop)</div>
+            <div>• <code class="text-indigo-600 font-bold">product-information.html</code></div>
+          </div>
+        </div>
+        <span class="mt-3 text-[10px] text-slate-400">Public browsing tier</span>
+      </div>
+
+      <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm flex flex-col justify-between">
+        <div>
+          <div class="flex items-center space-x-2 text-amber-600 mb-2">
+            <i class="fa-solid fa-key text-base"></i>
+            <h4 class="font-bold text-slate-900 text-sm">2. Auth Area</h4>
+          </div>
+          <p class="text-slate-500 text-[11px] mb-3">Account login and customer sign-up.</p>
+          <div class="font-mono text-slate-600 space-y-1 text-[11px]">
+            <div>• <code class="text-amber-700 font-bold">login-page.html</code></div>
+            <div>• <code class="text-amber-700 font-bold">register-page.html</code></div>
+          </div>
+        </div>
+        <span class="mt-3 text-[10px] text-slate-400">Issues session tokens</span>
+      </div>
+
+      <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm flex flex-col justify-between">
+        <div>
+          <div class="flex items-center space-x-2 text-emerald-600 mb-2">
+            <i class="fa-solid fa-cart-shopping text-base"></i>
+            <h4 class="font-bold text-slate-900 text-sm">3. Customer Area</h4>
+          </div>
+          <p class="text-slate-500 text-[11px] mb-3">Authenticated shopping & checkout funnel.</p>
+          <div class="font-mono text-slate-600 space-y-1 text-[11px]">
+            <div>• <code class="text-emerald-700 font-bold">webpage-login.html</code></div>
+            <div>• <code class="text-emerald-700 font-bold">product-information-login.html</code></div>
+            <div>• <code class="text-emerald-700 font-bold">shopping-cart.html</code></div>
+            <div>• <code class="text-emerald-700 font-bold">checkout*.html</code></div>
+            <div>• <code class="text-emerald-700 font-bold">user-info.html</code></div>
+          </div>
+        </div>
+        <span class="mt-3 text-[10px] text-slate-400">Protected customer session</span>
+      </div>
+
+      <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm flex flex-col justify-between">
+        <div>
+          <div class="flex items-center space-x-2 text-rose-600 mb-2">
+            <i class="fa-solid fa-shield-halved text-base"></i>
+            <h4 class="font-bold text-slate-900 text-sm">4. Admin Console</h4>
+          </div>
+          <p class="text-slate-500 text-[11px] mb-3">Secure management portal.</p>
+          <div class="font-mono text-slate-600 space-y-1 text-[11px]">
+            <div>• <code class="text-rose-700 font-bold">admin-login.html</code></div>
+            <div>• <code class="text-rose-700 font-bold">admin.html</code> (Dashboard)</div>
+            <div>• <code class="text-rose-700 font-bold">admin-edit.html</code> (CRUD)</div>
+          </div>
+        </div>
+        <span class="mt-3 text-[10px] text-slate-400">Requires admin authorization</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. How to Run Section -->
+  <section id="how-to-run" class="max-w-5xl mx-auto px-6 py-8">
+    <div class="text-center mb-8">
+      <h3 class="text-3xl font-extrabold text-slate-900">How to Run the Project</h3>
+      <p class="text-sm text-slate-500 mt-1">Choose between the automated 1-click launcher or manual setup.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <!-- Option 1: 1-Click Launch -->
+      <div
+        class="bg-gradient-to-br from-indigo-900 to-slate-900 text-white rounded-2xl p-7 shadow-xl border border-indigo-700 flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <span
+              class="px-3 py-1 bg-yellow-400/20 text-yellow-300 rounded-full text-xs font-bold border border-yellow-400/30">
+              Recommended for Evaluators
+            </span>
+            <span class="text-xs text-indigo-300 font-medium">Docker-Powered</span>
+          </div>
+          <h4 class="text-xl font-bold flex items-center gap-2 mb-2">
+            <i class="fa-solid fa-bolt text-yellow-400"></i> Option 1: 1-Click Launch
+          </h4>
+          <p class="text-indigo-200 text-xs leading-relaxed mb-6">
+            Starts MySQL 8.0 (auto-importing sample data), Node.js backend, and frontend web server, then opens your
+            browser automatically.
+          </p>
+
+          <div class="space-y-3 text-xs">
+            <div class="bg-indigo-950/70 p-3.5 rounded-xl border border-indigo-800 flex items-start space-x-3">
+              <span
+                class="w-6 h-6 rounded-full bg-indigo-600 text-white font-bold flex items-center justify-center shrink-0 text-xs">1</span>
+              <div>
+                <strong class="text-white block">Open Docker Desktop</strong>
+                <span class="text-indigo-200">Make sure Docker is running on your PC.</span>
+              </div>
+            </div>
+            <div class="bg-indigo-950/70 p-3.5 rounded-xl border border-indigo-800 flex items-start space-x-3">
+              <span
+                class="w-6 h-6 rounded-full bg-indigo-600 text-white font-bold flex items-center justify-center shrink-0 text-xs">2</span>
+              <div>
+                <strong class="text-white block">Double-click START.bat</strong>
+                <span class="text-indigo-200">Located in the root folder (or inside <code
+                    class="bg-indigo-800 text-yellow-300 px-1 rounded">run/START.bat</code>).</span>
+              </div>
+            </div>
+            <div class="bg-indigo-950/70 p-3.5 rounded-xl border border-indigo-800 flex items-start space-x-3">
+              <span
+                class="w-6 h-6 rounded-full bg-indigo-600 text-white font-bold flex items-center justify-center shrink-0 text-xs">3</span>
+              <div>
+                <strong class="text-white block">Ready! Browser Opens</strong>
+                <span class="text-indigo-200">Storefront opens at <code
+                    class="text-yellow-300">http://localhost:5500</code>.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-6 pt-4 border-t border-indigo-800/80 text-xs text-indigo-300">
+          🛑 Finished testing? Double-click <code
+            class="bg-indigo-800 text-yellow-300 px-2 py-0.5 rounded">STOP.bat</code> to shut down all containers
+          cleanly.
+        </div>
+      </div>
+
+      <!-- Option 2: Manual Local Setup -->
+      <div class="bg-white rounded-2xl p-7 shadow-sm border border-slate-200 flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-xs font-bold border border-slate-200">
+              Developer Setup
+            </span>
+            <span class="text-xs text-slate-500 font-medium">Native Node.js & MySQL</span>
+          </div>
+          <h4 class="text-xl font-bold text-slate-900 flex items-center gap-2 mb-2">
+            <i class="fa-solid fa-terminal text-indigo-600"></i> Option 2: Manual Setup
+          </h4>
+          <p class="text-slate-600 text-xs leading-relaxed mb-4">
+            Run services individually on your host machine without Docker:
+          </p>
+
+          <div class="space-y-3 text-xs">
+            <div class="bg-slate-50 p-3 rounded-xl border border-slate-200">
+              <span class="font-bold text-indigo-600 block mb-1">Step 1: Database</span>
+              <p class="text-slate-600 mb-1">Import schema and sample data into your MySQL server:</p>
+              <code class="block bg-slate-900 text-emerald-400 p-2 rounded text-[11px] font-mono overflow-x-auto">
+                  mysql -u root -p &lt; OneBankKheowStore-Back-End-main/data/onebankkheow.sql
+                </code>
+            </div>
+
+            <div class="bg-slate-50 p-3 rounded-xl border border-slate-200">
+              <span class="font-bold text-indigo-600 block mb-1">Step 2: Backend API (:3100)</span>
+              <code class="block bg-slate-900 text-emerald-400 p-2 rounded text-[11px] font-mono overflow-x-auto">
+                  cd OneBankKheowStore-Back-End-main<br>npm install<br>npm start
+                </code>
+            </div>
+
+            <div class="bg-slate-50 p-3 rounded-xl border border-slate-200">
+              <span class="font-bold text-indigo-600 block mb-1">Step 3: Frontend Web (:5500)</span>
+              <p class="text-slate-600 mb-1">No build step needed. Serve static HTML:</p>
+              <code class="block bg-slate-900 text-emerald-400 p-2 rounded text-[11px] font-mono overflow-x-auto">
+                  npx serve OneBankKheowStore-Front-End-main/html -l 5500
+                </code>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-4 pt-3 border-t border-slate-100 text-xs text-slate-500">
+          💡 <strong>Shortcut:</strong> You can also run <code
+            class="bg-slate-100 px-1.5 py-0.5 rounded text-slate-700">run\start-backend.bat</code> and <code
+            class="bg-slate-100 px-1.5 py-0.5 rounded text-slate-700">run\start-frontend.bat</code>.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Pre-Loaded Demo Accounts -->
+  <section id="credentials" class="max-w-4xl mx-auto px-6 py-6">
+    <div class="text-center mb-6">
+      <h3 class="text-2xl font-bold text-slate-900">Pre-Loaded Demo Accounts</h3>
+      <p class="text-sm text-slate-500 mt-1">Ready-to-use credentials pre-populated in the database for instant testing.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <!-- Customer Account -->
+      <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition">
+        <div class="flex items-center justify-between mb-4">
+          <div class="flex items-center space-x-3">
+            <div
+              class="w-10 h-10 rounded-xl bg-indigo-100 text-indigo-600 flex items-center justify-center font-bold text-lg">
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-slate-900">Customer Account</h4>
+              <p class="text-xs text-slate-500">Storefront customer with sample orders</p>
+            </div>
+          </div>
+          <span class="text-xs bg-indigo-50 text-indigo-700 px-2.5 py-1 rounded-md font-semibold">Client Role</span>
+        </div>
+
+        <div class="space-y-2 text-sm bg-slate-50 p-4 rounded-xl border border-slate-100 font-mono">
+          <div class="flex justify-between items-center">
+            <span class="text-slate-500 text-xs">Email:</span>
+            <span class="font-bold text-slate-800 select-all">somchai@email.com</span>
+          </div>
+          <div class="flex justify-between items-center">
+            <span class="text-slate-500 text-xs">Password:</span>
+            <span class="font-bold text-slate-800 select-all">pwd001</span>
+          </div>
+        </div>
+
+        <div class="mt-4 text-xs text-slate-500 flex items-center gap-1.5">
+          <i class="fa-solid fa-circle-info text-indigo-500"></i>
+          <span>Test Cart, Checkout, Currency Conversion, and Saved Addresses.</span>
+        </div>
+      </div>
+
+      <!-- Admin Account -->
+      <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition">
+        <div class="flex items-center justify-between mb-4">
+          <div class="flex items-center space-x-3">
+            <div
+              class="w-10 h-10 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center font-bold text-lg">
+              <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-slate-900">Admin Account</h4>
+              <p class="text-xs text-slate-500">Management & inventory portal</p>
+            </div>
+          </div>
+          <span class="text-xs bg-amber-50 text-amber-700 px-2.5 py-1 rounded-md font-semibold">Admin Role</span>
+        </div>
+
+        <div class="space-y-2 text-sm bg-slate-50 p-4 rounded-xl border border-slate-100 font-mono">
+          <div class="flex justify-between items-center">
+            <span class="text-slate-500 text-xs">Username:</span>
+            <span class="font-bold text-slate-800 select-all">admin01</span>
+          </div>
+          <div class="flex justify-between items-center">
+            <span class="text-slate-500 text-xs">Password:</span>
+            <span class="font-bold text-slate-800 select-all">admin123</span>
+          </div>
+        </div>
+
+        <div class="mt-4 text-xs text-slate-500 flex items-center gap-1.5">
+          <i class="fa-solid fa-circle-info text-amber-500"></i>
+          <span>Test Product CRUD: Create, Edit, Delete, and Stock Management.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Course Documentation / Reports Showcase (PJ1 & PJ2) -->
+  <section id="reports" class="max-w-5xl mx-auto px-6 py-8">
+    <div class="text-center mb-6">
+      <h3 class="text-2xl font-bold text-slate-900">Official Project Course Reports</h3>
+      <p class="text-sm text-slate-500 mt-1">Both project submission phases are documented and available for direct
+        viewing.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <!-- Phase I Card -->
+      <div
+        class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-3">
+            <span class="px-3 py-1 bg-sky-50 text-sky-700 rounded-full text-xs font-bold border border-sky-200">Phase I
+              Submission</span>
+            <span class="text-xs text-slate-400 font-mono">Sec1-Gr04-PJ1</span>
+          </div>
+          <h4 class="text-lg font-bold text-slate-900 mb-2 flex items-center gap-2">
+            <i class="fa-solid fa-book-open text-sky-600"></i> Phase I: Project Summary
+          </h4>
+          <p class="text-xs text-slate-600 leading-relaxed mb-4">
+            Focuses on the Business Domain conception, 20-Baht retail strategy, preliminary Figma UI wireframes,
+            Entity-Relationship Data Model, and comprehensive Data Dictionary.
+          </p>
+          <ul class="text-xs text-slate-500 space-y-1 mb-4 font-mono">
+            <li>• Business Domain: "20 Baht Shop" model</li>
+            <li>• Figma Wireframes & user interaction</li>
+            <li>• Relational ER Diagram (7 Entities)</li>
+            <li>• Complete Data Dictionary specification</li>
+          </ul>
+        </div>
+        <a href="Sec1-Gr04-PJ1-summary.pdf" target="_blank"
+          class="w-full inline-flex items-center justify-center space-x-2 bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold py-2.5 rounded-xl transition">
+          <i class="fa-solid fa-file-pdf text-sky-400"></i>
+          <span>Open Phase I Report (PDF)</span>
+        </a>
+      </div>
+
+      <!-- Phase II Card -->
+      <div
+        class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-3">
+            <span
+              class="px-3 py-1 bg-emerald-50 text-emerald-700 rounded-full text-xs font-bold border border-emerald-200">Phase
+              II Submission</span>
+            <span class="text-xs text-slate-400 font-mono">Sec1-Gr04-PJ2</span>
+          </div>
+          <h4 class="text-lg font-bold text-slate-900 mb-2 flex items-center gap-2">
+            <i class="fa-solid fa-code text-emerald-600"></i> Phase II: Implementation & Testing
+          </h4>
+          <p class="text-xs text-slate-600 leading-relaxed mb-4">
+            25-page comprehensive report detailing the 4-tier navigation diagram, frontend code logic for 17 web views,
+            backend REST web services, dynamic SQL, and 9 Postman test suites.
+          </p>
+          <ul class="text-xs text-slate-500 space-y-1 mb-4 font-mono">
+            <li>• 4-Tier Navigation Architecture Diagram</li>
+            <li>• 17 View code implementations & scripts</li>
+            <li>• Dynamic SQL queries & Exchange Rate proxy</li>
+            <li>• 9 Postman API test cases & verification</li>
+          </ul>
+        </div>
+        <a href="Sec1-Gr04-PJ2-report.pdf" target="_blank"
+          class="w-full inline-flex items-center justify-center space-x-2 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold py-2.5 rounded-xl transition shadow-sm">
+          <i class="fa-solid fa-file-pdf"></i>
+          <span>Open Phase II Full Report (PDF)</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Course & Team Section -->
+  <section id="team" class="max-w-5xl mx-auto px-6 py-6 mb-8">
+    <div class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200">
+      <div
+        class="flex flex-col md:flex-row items-start md:items-center justify-between pb-6 mb-6 border-b border-slate-100 gap-4">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-indigo-600">Course & Academic Credit</span>
+          <h3 class="text-xl font-bold text-slate-900 mt-1">ITCS223 Introduction to Web Development</h3>
+          <p class="text-xs text-slate-500">Faculty of Information and Communication Technology, Mahidol University</p>
+        </div>
+        <div class="text-xs text-slate-600 bg-slate-50 p-3 rounded-xl border border-slate-200 text-right md:text-left">
+          <strong class="text-slate-800 block">Presented to:</strong>
+          <div>Lect. Dr. Wudhichart Sawangphol</div>
+          <div>Asst. Prof. Dr. Jidapa Kraisangka</div>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="text-xs font-bold uppercase tracking-wider text-slate-500 mb-3">
+          Section 1, Group 04 Team Members
+        </h4>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+          <div class="flex items-center space-x-3 p-3 bg-slate-50 rounded-xl border border-slate-100">
+            <span class="font-mono text-xs font-bold text-indigo-600 bg-indigo-50 px-2 py-1 rounded">6788011</span>
+            <span class="text-sm font-semibold text-slate-800">Patharapol Chaisrithong</span>
+          </div>
+          <div class="flex items-center space-x-3 p-3 bg-slate-50 rounded-xl border border-slate-100">
+            <span class="font-mono text-xs font-bold text-indigo-600 bg-indigo-50 px-2 py-1 rounded">6788016</span>
+            <span class="text-sm font-semibold text-slate-800">Siraphat Chen</span>
+          </div>
+          <div class="flex items-center space-x-3 p-3 bg-slate-50 rounded-xl border border-slate-100">
+            <span class="font-mono text-xs font-bold text-indigo-600 bg-indigo-50 px-2 py-1 rounded">6788091</span>
+            <span class="text-sm font-semibold text-slate-800">Peerawat Pojlertarun</span>
+          </div>
+          <div class="flex items-center space-x-3 p-3 bg-slate-50 rounded-xl border border-slate-100">
+            <span class="font-mono text-xs font-bold text-indigo-600 bg-indigo-50 px-2 py-1 rounded">6788117</span>
+            <span class="text-sm font-semibold text-slate-800">Pasit Sugrivaka</span>
+          </div>
+          <div class="flex items-center space-x-3 p-3 bg-slate-50 rounded-xl border border-slate-100">
+            <span class="font-mono text-xs font-bold text-indigo-600 bg-indigo-50 px-2 py-1 rounded">6788185</span>
+            <span class="text-sm font-semibold text-slate-800">Daranpob Sianghen</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Footer -->
   <footer class="bg-white border-t border-slate-200 py-6 text-center text-xs text-slate-500">
-    <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center gap-2">
-      <span>Developed for ITCS-223 Web Programming • OneBankKheow Store</span>
-      <span>Documentation & Showcase Portal</span>
+    <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center gap-3">
+      <span>ITCS223 Introduction to Web Development • Faculty of ICT, Mahidol University</span>
+      <div class="flex items-center space-x-4">
+        Powered by Group04-section 1
+      </div>
     </div>
   </footer>
 
 </body>
-</html>
 
+</html>
